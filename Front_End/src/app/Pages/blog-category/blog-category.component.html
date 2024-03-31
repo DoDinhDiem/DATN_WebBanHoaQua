@@ -1,0 +1,43 @@
+<div id="breadcrumb">
+    <div class="container">
+        <h2 class="title">Tin tức</h2>
+
+        <ul class="breadcrumb">
+            <li><a [routerLink]="['/']" title="Home">Trang chủ</a></li>
+            <li><span>Tin tức</span></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="blog-list full-width">
+        <div class="posts-list">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"
+                    *ngFor="let item of newpaper | paginate: { itemsPerPage: 6, currentPage: p }">
+                    <div class="post-item">
+                        <div class="post-image">
+                            <a [routerLink]="['/blogDetail', item.id]">
+                                <img class="img-responsive" src="{{ baseUrl }}/Uploads/TinTuc/{{ item.image }}"
+                                    alt="Blog Image">
+                            </a>
+                        </div>
+                        <a class="post-title" [routerLink]="['/blogDetail', item?.id]">{{ item.tieuDe }}</a>
+                        <div class="post-info">
+                            <span class="date item"><i class="zmdi zmdi-calendar-note"></i>{{ item.ngayTao | date:
+                                'dd/MM/yyyy' }}</span>
+                        </div>
+                        <div class="post-description">
+                            <p
+                                [innerHTML]="item.noiDung.length > 240 ? (item.noiDung | slice:0:240) + '...' : item.noiDung">
+                            </p>
+                            <span class="post-readmore"><a [routerLink]="['/blogDetail', item?.id]">xem thêm</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <pagination-controls (pageChange)="p = $event" class="my-pagination"></pagination-controls>
+    </div>
+</div>

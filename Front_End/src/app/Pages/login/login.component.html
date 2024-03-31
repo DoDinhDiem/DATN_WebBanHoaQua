@@ -1,0 +1,45 @@
+<div id="breadcrumb">
+    <div class="container">
+        <h2 class="title">Đăng nhập</h2>
+
+        <ul class="breadcrumb">
+            <li><a [routerLink]="['/']" title="Home">Trang chủ</a></li>
+            <li><span>Đăng nhập</span></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="login-page">
+        <div class="login-form form">
+            <div class="block-title">
+                <h2 class="title"><span>Đăng nhập</span></h2>
+            </div>
+
+            <form action="#" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" [(ngModel)]="khachhang.email" value="" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label>Mật khẩu</label>
+                    <input type="password" [(ngModel)]="khachhang.passWork" value="" name="password">
+                </div>
+
+                <div class="form-group text-center">
+                    <div class="link">
+                        <a href="#">Bạn chưa có tài khoản? </a>
+                        <a [routerLink]="['/register']">Đăng ký?</a>
+                    </div>
+                </div>
+
+                <div class="form-group text-center">
+                    <input type="submit" class="btn btn-primary" (click)="singIn()" value="Sign In">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<p-toast></p-toast>

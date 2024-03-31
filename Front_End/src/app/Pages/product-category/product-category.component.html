@@ -1,0 +1,146 @@
+<!-- Breadcrumb -->
+<div id="breadcrumb">
+    <div class="container">
+        <h2 class="title">{{ tenLSP }}</h2>
+
+        <ul class="breadcrumb">
+            <li><a href="#" title="Home">Trang chủ</a></li>
+            <li><a>{{ tenLSP }}</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <!-- Sidebar -->
+        <div id="left-column" class="sidebar col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <!-- Block - Product Categories -->
+            <div class="block product-categories">
+                <h3 class="block-title">Sản phẩm</h3>
+
+                <div class="block-content">
+                    <div class="item" *ngFor="let item of loaiSanPham">
+                        <a class="category-title" [routerLink]="['/productCategory', item.id]">{{ item.tenLoai
+                            }}</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Block - Filter -->
+            <div class="block product-filter">
+
+                <div class="block-content">
+                    <div class="filter-item">
+                        <h3 class="filter-title">Khoảng giá</h3>
+
+                        <div class="block-content">
+                            <div id="slider-range" class="tiva-filter">
+                                <div class="filter-item price-filter">
+                                    <div class="layout-slider">
+                                        Khoảng giá: {{giaMin | number}} ~ {{giaMax | number}}
+                                    </div>
+                                    <p-slider [(ngModel)]="giaMax" [max]="giaRange" (onChange)="onSlide()"></p-slider>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div id="center-column" class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+            <div class="product-category-page">
+                <!-- Nav Bar -->
+                <div class="products-bar">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-6">
+
+
+                            <div class="total-products">Có {{ totalItem }} sản phẩm</div>
+                        </div>
+
+                        <div class="col-md-6 col-xs-6">
+                            <div class="filter-bar">
+                                <form action="#" class="pull-right">
+                                    <div class="select">
+                                        <select name="sortby" id="sortby" class="form-control"
+                                            (change)="onSapXepChange()" [(ngModel)]="sapxepSelects">
+                                            <option *ngFor="let item of sapxep" [value]="item.value">{{ item.name }}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content">
+                    <!-- Products Grid -->
+                    <div class="tab-pane active" id="products-grid">
+                        <div class="products-block">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"
+                                    *ngFor="let item of sanPhams?.items | paginate: { itemsPerPage: 30, currentPage: p }">
+                                    <div class="product-item">
+                                        <div class="product-image">
+                                            <a [routerLink]="['/productDetail', item.id]">
+                                                <img width="182" src="{{ baseUrl }}/Uploads/Products/{{ item.image }}"
+                                                    alt="{{ item.tenSanPham }}">
+                                            </a>
+                                        </div>
+
+                                        <div class="product-title">
+                                            <a [routerLink]="['/productDetail', item.id]">
+                                                {{ item.tenSanPham }}
+                                            </a>
+                                        </div>
+
+                                        <div class="product-rating">
+                                            <div class="star on"></div>
+                                            <div class="star on"></div>
+                                            <div class="star on "></div>
+                                            <div class="star on"></div>
+                                            <div class="star"></div>
+                                        </div>
+
+                                        <div class="product-price" *ngIf="item.giamGia > 0">
+                                            <span class="sale-price">{{ item.giaBan - item.giamGia |
+                                                number}}</span>
+                                            <span class="base-price">{{ item.giaBan | number}}</span>
+                                        </div>
+                                        <div class="product-price" *ngIf="item.giamGia == 0">
+                                            <span class="sale-price">{{ item.giaBan | number}}</span>
+                                        </div>
+
+                                        <div class="product-buttons">
+                                            <a class="add-to-cart" (click)="addToCart(item)">
+                                                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                            </a>
+
+                                            <a class="add-wishlist" href="#">
+                                                <i class="fa fa-heart" aria-hidden="true"></i>
+                                            </a>
+
+                                            <a class="quickview" href="#">
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <pagination-controls (pageChange)="p = $event" class="my-pagination"></pagination-controls>
+            </div>
+        </div>
+    </div>
+</div>
+<p-toast></p-toast>

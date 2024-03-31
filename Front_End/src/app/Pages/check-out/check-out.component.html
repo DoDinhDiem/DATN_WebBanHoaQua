@@ -1,0 +1,190 @@
+<!-- Breadcrumb -->
+<div id="breadcrumb">
+    <div class="container">
+        <h2 class="title">Thanh toán</h2>
+
+        <ul class="breadcrumb">
+            <li><a [routerLink]="['/']" title="Home">Trang chủ</a></li>
+            <li><span>Thanh toán</span></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="page-checkout">
+        <div class="row">
+            <div class="checkout-left col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                <div class="panel-group" id="accordion">
+
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle collapsed">
+                                    Chi tiết
+                                </a>
+                            </h4>
+                        </div>
+                        <div class=" accordion-body ">
+                            <div class="panel-body">
+                                <form action="#" id="formaddress" method="post" class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-md-6">
+                                            <label>Họ tên</label>
+                                            <input type="text" [(ngModel)]="khachhang.hoTen" name="hoten" value=""
+                                                class="form-control">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Email</label>
+                                            <input type="email" value="" [(ngModel)]="khachhang.email" name="email"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <label>Số điện thoại</label>
+                                            <input type="text" value="" [(ngModel)]="khachhang.soDienThoai"
+                                                name="soDienThoai" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <label>Địa chỉ </label>
+                                            <input type="text" value="" [(ngModel)]="khachhang.diaChi" name="diaChi"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <label>Ghi chú </label>
+                                            <textarea style="height: 80px;" [(ngModel)]="hoadon.ghiChu" name="ghichu"
+                                                type="text" value="" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="panel-body">
+                                <table class="cart-summary table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th class="width-80 text-center">Ảnh</th>
+                                            <th>Tên</th>
+                                            <th class="width-100 text-center">Đơn giá</th>
+                                            <th class="width-100 text-center">Số lượng</th>
+                                            <th class="width-100 text-center">Thành tiền</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr *ngFor="let item of cartItems">
+                                            <td>
+                                                <a [routerLink]="['/product-detail', item.id]">
+                                                    <img width="80" alt="Product Image" class="img-responsive"
+                                                        src="{{ baseUrl }}/Uploads/Products/{{ item.image }}">
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a [routerLink]="['/product-detail', item.id]" class="product-name">{{
+                                                    item.tenSanPham
+                                                    }}</a>
+                                            </td>
+                                            <td class="text-center">
+                                                {{item.thanhTien | number}}
+                                            </td>
+                                            <td class="text-center">
+                                                {{item.soLuong}}
+                                            </td>
+                                            <td class="text-center">
+                                                {{ calculateSubtotal(item) | number }}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h4 class="heading-primary">Tổng đơn hàng</h4>
+                                <table class="table cart-total">
+                                    <tbody>
+                                        <tr>
+                                            <th>
+                                                Tổng phụ
+                                            </th>
+                                            <td class="total">
+                                                {{ totalPrice | number}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                Phí vận chuyển
+                                            </th>
+                                            <td>
+                                                Miễn phí
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <strong>Tổng</strong>
+                                            </th>
+                                            <td class="total">
+                                                {{ totalPrice | number}}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h4 class="heading-primary">Phương thức thanh toán</h4>
+                                <form action="#" method="post">
+                                    <div class="item">
+                                        <input type="radio" name="paymentMethod" (change)="selectPaymentMethod('vnpay')"
+                                            [checked]="selectedPaymentMethod === 'vnpay'">Thanh tóa qua ví VNPAY
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" name="paymentMethod" (change)="selectPaymentMethod('cash')"
+                                            [checked]="selectedPaymentMethod === 'cash'">Thanh toán khi nhận hàng
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pull-right">
+                    <input type="submit" value="Đặt hàng" (click)="onSubmit()" name="proceed" class="btn btn-primary">
+                </div>
+            </div>
+
+            <div class="checkout-right col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <h4 class="title">Tổng đơn hàng</h4>
+                <table class="table cart-total">
+                    <tbody>
+                        <tr class="cart-subtotal">
+                            <th>
+                                <strong>Tổng phụ</strong>
+                            </th>
+                            <td>
+                                <strong><span class="amount">{{ totalPrice | number}}</span></strong>
+                            </td>
+                        </tr>
+                        <tr class="shipping">
+                            <th>
+                                Phí vận chuyển
+                            </th>
+                            <td>
+                                Miễn phí<input type="hidden" value="free_shipping" class="shipping-method"
+                                    name="shipping_method">
+                            </td>
+                        </tr>
+                        <tr class="total">
+                            <th>
+                                <strong>Tổng</strong>
+                            </th>
+                            <td>
+                                <strong><span class="amount">{{ totalPrice | number}}</span></strong>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<p-toast></p-toast>

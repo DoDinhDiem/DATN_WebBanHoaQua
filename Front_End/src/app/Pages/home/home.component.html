@@ -1,0 +1,663 @@
+<div class="section slideshow">
+    <div class="container">
+        <div class="tiva-slideshow-wrapper">
+            <p-galleria [value]="images" [showThumbnails]="false" [showItemNavigatorsOnHover]="true"
+                [showItemNavigators]="true" [circular]="true" [autoPlay]="true" [transitionInterval]="3000"
+                [responsiveOptions]="SlideOptions">
+                <ng-template pTemplate="item" let-item>
+                    <img src="{{ baseUrl }}/Uploads/Slide/{{ item.image }}" style="width: 100%; display: block;"
+                        alt="Banner 1">
+                </ng-template>
+            </p-galleria>
+        </div>
+    </div>
+</div>
+
+
+<!-- Banners -->
+<div class="section banners">
+    <div class="container">
+        <div class="row margin-10">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding-10">
+                <div class="banner-item effect">
+                    <a href="#">
+                        <img class="img-responsive" src="assets/Client/img/banner/home2-banner-1.png" alt="Banner 1">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding-10">
+                <div class="banner-item effect">
+                    <a href="#">
+                        <img class="img-responsive" src="assets/Client/img/banner/home2-banner-2.png" alt="Banner 2">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding-10">
+                <div class="banner-item effect">
+                    <a href="#">
+                        <img class="img-responsive" src="assets/Client/img/banner/home2-banner-3.png" alt="Banner 3">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 2 Columns -->
+<div class="two-columns">
+    <div class="container">
+        <div class="row ">
+            <!-- Left Column -->
+            <div class="col-20p col-md-3 left-column">
+                <!-- Product - Category -->
+                <div class="section product-categories">
+                    <div class="block-title">
+                        <h2 class="title">Sản phẩm</h2>
+                    </div>
+
+                    <div class="block-content">
+
+                        <div class="item" *ngFor="let item of loaiSanPham">
+                            <a class="category-title" [routerLink]="['/productCategory', item.id]">{{ item.tenLoai
+                                }}</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Product - Flash Deals -->
+                <div class="section products-block nav-color flash-deals layout-4">
+                    <div class="block-title">
+                        <h2 class="title">Giảm giá</h2>
+                    </div>
+
+                    <div class="block-content">
+                        <p-carousel [value]="sanPhamGiamGia" [numVisible]="1" [numScroll]="2" [showNavigators]="false"
+                            [circular]="true" [autoplayInterval]="7000" [responsiveOptions]="responsiveOptions">
+                            <ng-template let-item pTemplate="item">
+                                <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+                                    <div class="product-item">
+                                        <div class="product-image">
+                                            <a [routerLink]="['/productDetail', item.id]">
+                                                <img width="182" src="{{ baseUrl }}/Uploads/Products/{{ item.image }}"
+                                                    alt="{{ item.tenSanPham }}">
+                                            </a>
+                                        </div>
+
+                                        <div class="product-title">
+                                            <a [routerLink]="['/productDetail', item.id]">
+                                                {{ item.tenSanPham }}
+                                            </a>
+                                        </div>
+
+                                        <div class="product-rating">
+                                            <div class="star on"></div>
+                                            <div class="star on"></div>
+                                            <div class="star on "></div>
+                                            <div class="star on"></div>
+                                            <div class="star"></div>
+                                        </div>
+
+                                        <div class="product-price" *ngIf="item.giamGia > 0">
+                                            <span class="sale-price">{{ item.giaBan - item.giamGia |
+                                                number}}</span>
+                                            <span class="base-price">{{ item.giaBan | number}}</span>
+                                        </div>
+                                        <div class="product-price" *ngIf="item.giamGia == 0">
+                                            <span class="sale-price">{{ item.giaBan | number}}</span>
+                                        </div>
+
+                                        <div class="product-buttons">
+                                            <a class="add-to-cart" (click)="addToCart(item)">
+                                                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                            </a>
+
+                                            <a class="add-wishlist" href="#">
+                                                <i class="fa fa-heart" aria-hidden="true"></i>
+                                            </a>
+
+                                            <a class="quickview" href="#">
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </p-carousel>
+                    </div>
+                </div>
+
+
+                <!-- Payment Intro -->
+                <div class="section payment-intro">
+                    <div class="block-content">
+                        <div class="item">
+                            <img class="img-responsive" src="assets/Client/img/home2-payment-1.png"
+                                alt="Giới thiệu thanh toán">
+                            <h3 class="title">Miễn phí giao hàng</h3>
+                            <div class="content">Proin gravida nibh vel velit auctor aliquet aenean</div>
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="assets/Client/img/home2-payment-2.png"
+                                alt="Giới thiệu thanh toán">
+                            <h3 class="title">Thanh toán an toàn</h3>
+                            <div class="content">Proin gravida nibh vel velit auctor aliquet aenean</div>
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="assets/Client/img/home2-payment-3.png"
+                                alt="Giới thiệu thanh toán">
+                            <h3 class="title">Đảm bảo hoàn tiền</h3>
+                            <div class="content">Proin gravida nibh vel velit auctor aliquet aenean</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Right Column -->
+            <div class="col-80p col-md-9 right-column">
+                <!-- Product - Category Tab -->
+                <div class="section products-block category-tab">
+                    <div class="block-title">
+                        <!-- <h2 class="title">Vegetables</h2> -->
+                    </div>
+
+                    <div class="block-content">
+                        <!-- Tab Navigation -->
+                        <div class="tab-nav">
+                            <ul>
+                                <li class="active">
+                                    <a data-toggle="tab" href="#new-arrivals">
+                                        <span>Mới</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" href="#best-seller">
+                                        <span>Bán chạy</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" href="#on-sale">
+                                        <span>Giảm giá</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Tab Content -->
+                        <div class="tab-content">
+                            <!-- New Arrivals -->
+                            <div role="tabpanel" class="tab-pane fade in active" id="new-arrivals">
+                                <p-carousel [value]="sanPhamMoi" [showIndicators]="false" [numVisible]="4"
+                                    [numScroll]="4" [circular]="true" [autoplayInterval]="7000"
+                                    [responsiveOptions]="responsiveOptions">
+                                    <ng-template let-item pTemplate="item">
+                                        <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+                                            <div class="product-item">
+                                                <div class="product-image">
+                                                    <a [routerLink]="['/productDetail', item.id]">
+                                                        <img width="182"
+                                                            src="{{ baseUrl }}/Uploads/Products/{{ item.image }}"
+                                                            alt="{{ item.tenSanPham }}">
+                                                    </a>
+                                                </div>
+
+                                                <div class="product-title">
+                                                    <a [routerLink]="['/productDetail', item.id]">
+                                                        {{ item.tenSanPham }}
+                                                    </a>
+                                                </div>
+
+                                                <div class="product-rating">
+                                                    <div class="star on"></div>
+                                                    <div class="star on"></div>
+                                                    <div class="star on "></div>
+                                                    <div class="star on"></div>
+                                                    <div class="star"></div>
+                                                </div>
+
+                                                <div class="product-price" *ngIf="item.giamGia > 0">
+                                                    <span class="sale-price">{{ item.giaBan - item.giamGia |
+                                                        number}}</span>
+                                                    <span class="base-price">{{ item.giaBan | number}}</span>
+                                                </div>
+                                                <div class="product-price" *ngIf="item.giamGia == 0">
+                                                    <span class="sale-price">{{ item.giaBan | number}}</span>
+                                                </div>
+
+                                                <div class="product-buttons">
+                                                    <a class="add-to-cart" (click)="addToCart(item)">
+                                                        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                                    </a>
+
+                                                    <a class="add-wishlist" href="#">
+                                                        <i class="fa fa-heart" aria-hidden="true"></i>
+                                                    </a>
+
+                                                    <a class="quickview" href="#">
+                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ng-template>
+                                </p-carousel>
+                            </div>
+
+                            <!-- Best Seller -->
+                            <div role="tabpanel" class="tab-pane fade" id="best-seller">
+                                <p-carousel [value]="sanPhamBanChay" [numVisible]="4" [numScroll]="4" [circular]="true"
+                                    [autoplayInterval]="7000" [responsiveOptions]="responsiveOptions">
+                                    <ng-template let-item pTemplate="item">
+                                        <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+                                            <div class="product-item">
+                                                <div class="product-image">
+                                                    <a [routerLink]="['/productDetail', item.id]">
+                                                        <img width="182"
+                                                            src="{{ baseUrl }}/Uploads/Products/{{ item.image }}"
+                                                            alt="{{ item.tenSanPham }}">
+                                                    </a>
+                                                </div>
+
+                                                <div class="product-title">
+                                                    <a [routerLink]="['/productDetail', item.id]">
+                                                        {{ item.tenSanPham }}
+                                                    </a>
+                                                </div>
+
+                                                <div class="product-rating">
+                                                    <div class="star on"></div>
+                                                    <div class="star on"></div>
+                                                    <div class="star on "></div>
+                                                    <div class="star on"></div>
+                                                    <div class="star"></div>
+                                                </div>
+
+                                                <div class="product-price" *ngIf="item.giamGia > 0">
+                                                    <span class="sale-price">{{ item.giaBan - item.giamGia |
+                                                        number}}</span>
+                                                    <span class="base-price">{{ item.giaBan | number}}</span>
+                                                </div>
+                                                <div class="product-price" *ngIf="item.giamGia == 0">
+                                                    <span class="sale-price">{{ item.giaBan | number}}</span>
+                                                </div>
+
+                                                <div class="product-buttons">
+                                                    <a class="add-to-cart" (click)="addToCart(item)">
+                                                        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                                    </a>
+
+                                                    <a class="add-wishlist" href="#">
+                                                        <i class="fa fa-heart" aria-hidden="true"></i>
+                                                    </a>
+
+                                                    <a class="quickview" href="#">
+                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ng-template>
+                                </p-carousel>
+                            </div>
+
+
+                            <!-- On Sale -->
+                            <div role="tabpanel" class="tab-pane fade" id="on-sale">
+                                <p-carousel [value]="sanPhamGiamGia" [numVisible]="4" [numScroll]="4" [circular]="true"
+                                    [autoplayInterval]="7000" [responsiveOptions]="responsiveOptions">
+                                    <ng-template let-item pTemplate="item">
+                                        <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+                                            <div class="product-item">
+                                                <div class="product-image">
+                                                    <a [routerLink]="['/productDetail', item.id]">
+                                                        <img width="182"
+                                                            src="{{ baseUrl }}/Uploads/Products/{{ item.image }}"
+                                                            alt="{{ item.tenSanPham }}">
+                                                    </a>
+                                                </div>
+
+                                                <div class="product-title">
+                                                    <a [routerLink]="['/productDetail', item.id]">
+                                                        {{ item.tenSanPham }}
+                                                    </a>
+                                                </div>
+
+                                                <div class="product-rating">
+                                                    <div class="star on"></div>
+                                                    <div class="star on"></div>
+                                                    <div class="star on "></div>
+                                                    <div class="star on"></div>
+                                                    <div class="star"></div>
+                                                </div>
+
+                                                <div class="product-price" *ngIf="item.giamGia > 0">
+                                                    <span class="sale-price">{{ item.giaBan - item.giamGia |
+                                                        number}}</span>
+                                                    <span class="base-price">{{ item.giaBan | number}}</span>
+                                                </div>
+                                                <div class="product-price" *ngIf="item.giamGia == 0">
+                                                    <span class="sale-price">{{ item.giaBan | number}}</span>
+                                                </div>
+
+                                                <div class="product-buttons">
+                                                    <a class="add-to-cart" (click)="addToCart(item)">
+                                                        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                                    </a>
+
+                                                    <a class="add-wishlist" href="#">
+                                                        <i class="fa fa-heart" aria-hidden="true"></i>
+                                                    </a>
+
+                                                    <a class="quickview" href="#">
+                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ng-template>
+                                </p-carousel>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Newsletter -->
+                <div class="section newsletter">
+                    <h2 class="block-title">Bản tin</h2>
+
+                    <div class="block-content">
+                        <p class="description">Đăng ký nhận bản tin để nhận các ưu đãi đặc biệt và tin tức độc quyền về
+                            Sản phẩm FreshMart</p>
+                        <form action="#" method="post">
+                            <input type="text" placeholder="Nhập địa chỉ Email">
+                            <button type="submit" class="btn btn-primary">Đăng ký</button>
+                        </form>
+                    </div>
+                </div>
+
+
+                <!-- Product - Category Double -->
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="section products-block category-double">
+                            <div class="block-title">
+                                <h2 class="title">Hoa quả</h2>
+                            </div>
+
+                            <div class="block-content">
+                                <p-carousel [value]="hoaqua" [numVisible]="2" [numScroll]="2" [showNavigators]="false"
+                                    [circular]="true" [autoplayInterval]="7000" [responsiveOptions]="responsiveOptions">
+                                    <ng-template let-item pTemplate="item">
+                                        <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+                                            <div class="product-item">
+                                                <div class="product-image">
+                                                    <a [routerLink]="['/productDetail', item.id]">
+                                                        <img width="182"
+                                                            src="{{ baseUrl }}/Uploads/Products/{{ item.image }}"
+                                                            alt="{{ item.tenSanPham }}">
+                                                    </a>
+                                                </div>
+
+                                                <div class="product-title">
+                                                    <a [routerLink]="['/productDetail', item.id]">
+                                                        {{ item.tenSanPham }}
+                                                    </a>
+                                                </div>
+
+                                                <div class="product-rating">
+                                                    <div class="star on"></div>
+                                                    <div class="star on"></div>
+                                                    <div class="star on "></div>
+                                                    <div class="star on"></div>
+                                                    <div class="star"></div>
+                                                </div>
+
+                                                <div class="product-price" *ngIf="item.giamGia > 0">
+                                                    <span class="sale-price">{{ item.giaBan - item.giamGia |
+                                                        number}}</span>
+                                                    <span class="base-price">{{ item.giaBan | number}}</span>
+                                                </div>
+                                                <div class="product-price" *ngIf="item.giamGia == 0">
+                                                    <span class="sale-price">{{ item.giaBan | number}}</span>
+                                                </div>
+
+                                                <div class="product-buttons">
+                                                    <a class="add-to-cart" (click)="addToCart(item)">
+                                                        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                                    </a>
+
+                                                    <a class="add-wishlist" href="#">
+                                                        <i class="fa fa-heart" aria-hidden="true"></i>
+                                                    </a>
+
+                                                    <a class="quickview" href="#">
+                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ng-template>
+                                </p-carousel>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="section products-block category-double">
+                            <div class="block-title">
+                                <h2 class="title">Nước ép</h2>
+                            </div>
+
+                            <div class="block-content">
+                                <p-carousel [value]="nuocep" [numVisible]="2" [numScroll]="2" [showNavigators]="false"
+                                    [circular]="true" [autoplayInterval]="7000" [responsiveOptions]="responsiveOptions">
+                                    <ng-template let-item pTemplate="item">
+                                        <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+                                            <div class="product-item">
+                                                <div class="product-image">
+                                                    <a [routerLink]="['/productDetail', item.id]">
+                                                        <img width="182"
+                                                            src="{{ baseUrl }}/Uploads/Products/{{ item.image }}"
+                                                            alt="{{ item.tenSanPham }}">
+                                                    </a>
+                                                </div>
+
+                                                <div class="product-title">
+                                                    <a [routerLink]="['/productDetail', item.id]">
+                                                        {{ item.tenSanPham }}
+                                                    </a>
+                                                </div>
+
+                                                <div class="product-rating">
+                                                    <div class="star on"></div>
+                                                    <div class="star on"></div>
+                                                    <div class="star on "></div>
+                                                    <div class="star on"></div>
+                                                    <div class="star"></div>
+                                                </div>
+
+                                                <div class="product-price" *ngIf="item.giamGia > 0">
+                                                    <span class="sale-price">{{ item.giaBan - item.giamGia |
+                                                        number}}</span>
+                                                    <span class="base-price">{{ item.giaBan | number}}</span>
+                                                </div>
+                                                <div class="product-price" *ngIf="item.giamGia == 0">
+                                                    <span class="sale-price">{{ item.giaBan | number}}</span>
+                                                </div>
+
+                                                <div class="product-buttons">
+                                                    <a class="add-to-cart" (click)="addToCart(item)">
+                                                        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                                    </a>
+
+                                                    <a class="add-wishlist" href="#">
+                                                        <i class="fa fa-heart" aria-hidden="true"></i>
+                                                    </a>
+
+                                                    <a class="quickview" href="#">
+                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ng-template>
+                                </p-carousel>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Banners -->
+                <div class="section banners-block">
+                    <div class="row margin-15">
+                        <div class="col-lg-6 col-md-6 col-sm-6 padding-15">
+                            <div class="banner-item effect">
+                                <a href="#">
+                                    <img class="img-responsive" src="assets/Client/img/banner/home2-banner-4.png"
+                                        alt="Banner">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 padding-15">
+                            <div class="banner-item effect">
+                                <a href="#">
+                                    <img class="img-responsive" src="assets/Client/img/banner/home2-banner-5.png"
+                                        alt="Banner">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Product - New Arrivals -->
+                <div class="section products-block new-arrivals layout-3">
+                    <div class="block-title">
+                        <h2 class="title">Sản phẩm mới</h2>
+                    </div>
+
+                    <div class="block-content">
+
+                        <div class="item col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                            *ngFor="let item of sanPhamMoi.slice(0, 9)">
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <a [routerLink]="['/productDetail', item.id]">
+                                        <img width="182" src="{{ baseUrl }}/Uploads/Products/{{ item.image }}"
+                                            alt="{{ item.tenSanPham }}">
+                                    </a>
+                                </div>
+
+                                <div class="product-info">
+                                    <div class="product-title">
+                                        <a [routerLink]="['/productDetail', item.id]">
+                                            {{ item.tenSanPham }}
+                                        </a>
+                                    </div>
+
+                                    <div class="product-rating">
+                                        <div class="star on"></div>
+                                        <div class="star on"></div>
+                                        <div class="star on "></div>
+                                        <div class="star on"></div>
+                                        <div class="star"></div>
+                                    </div>
+
+                                    <div class="product-price" *ngIf="item.giamGia > 0">
+                                        <span class="sale-price">{{ item.giaBan - item.giamGia |
+                                            number}}</span>
+                                        <span class="base-price">{{ item.giaBan | number}}</span>
+                                    </div>
+                                    <div class="product-price" *ngIf="item.giamGia == 0">
+                                        <span class="sale-price">{{ item.giaBan | number}}</span>
+                                    </div>
+
+                                    <div class="product-buttons">
+                                        <a class="add-to-cart" (click)="addToCart(item)">
+                                            <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                        </a>
+
+                                        <a class="add-wishlist" href="#">
+                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                        </a>
+
+                                        <a class="quickview" href="#">
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Intro -->
+<div class="section intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="intro-header">
+                    <img src="assets/Client/img/leaf.png" alt="Partner 1">
+                    <h3>Tại sao chọn chúng tôi</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="intro-left">
+                    <div class="intro-item">
+                        <p><img src="assets/Client/img/intro-icon-1.png" alt="Intro Image"></p>
+                        <h4>Luôn tươi mới</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua.</p>
+                    </div>
+
+                    <div class="intro-item">
+                        <p><img src="assets/Client/img/intro-icon-2.png" alt="Intro Image"></p>
+                        <h4>Cực kỳ lành mạnh</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="effect">
+                    <a href="#">
+                        <img class="intro-image img-responsive" src="assets/Client/img/intro-2.png" alt="Intro Image">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="intro-right">
+                    <div class="intro-item">
+                        <p><img src="assets/Client/img/intro-icon-3.png" alt="Intro Image"></p>
+                        <h4>100% Tự nhiên</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua.</p>
+                    </div>
+
+                    <div class="intro-item">
+                        <p><img src="assets/Client/img/intro-icon-4.png" alt="Intro Image"></p>
+                        <h4>Chất lượng cao cấp</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<p-toast></p-toast>

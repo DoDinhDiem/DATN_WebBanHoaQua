@@ -1,0 +1,117 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\LoaiSanPham\\personnel_1711587212030_0.png",
+      "PackagePath": "staticwebassets\\Uploads\\LoaiSanPham\\personnel_1711587212030_0.png"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\LoaiSanPham\\personnel_1711587424640_0.png",
+      "PackagePath": "staticwebassets\\Uploads\\LoaiSanPham\\personnel_1711587424640_0.png"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\LoaiSanPham\\personnel_1711587446536_1.png",
+      "PackagePath": "staticwebassets\\Uploads\\LoaiSanPham\\personnel_1711587446536_1.png"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\NhanVien\\nhanvien_1711619332536_0.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\NhanVien\\nhanvien_1711619332536_0.jpg"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\NhanVien\\nhanvien_1711619417589_0.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\NhanVien\\nhanvien_1711619417589_0.jpg"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\NhanVien\\nhanvien_1711619588035_0.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\NhanVien\\nhanvien_1711619588035_0.jpg"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\NhanVien\\nhanvien_1711620597430_1.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\NhanVien\\nhanvien_1711620597430_1.jpg"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\NhanVien\\nhanvien_1711621601835_0.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\NhanVien\\nhanvien_1711621601835_0.jpg"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\Products\\product_1711599538814_1.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Products\\product_1711599538814_1.jpg"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\Products\\product_1711599538815_2.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Products\\product_1711599538815_2.jpg"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\Products\\product_1711599538816_3.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Products\\product_1711599538816_3.jpg"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\Products\\product_1711599538816_4.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Products\\product_1711599538816_4.jpg"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\Products\\product_1711600426560_0.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Products\\product_1711600426560_0.jpg"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\Slide\\slidesp_1711607844572_0.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Slide\\slidesp_1711607844572_0.jpg"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\Slide\\slidesp_1711607887550_0.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Slide\\slidesp_1711607887550_0.jpg"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\Slide\\slidesp_1711762533867_0.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Slide\\slidesp_1711762533867_0.jpg"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\Slide\\slidesp_1711762540471_1.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Slide\\slidesp_1711762540471_1.jpg"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\Slide\\slidesp_1711762568787_2.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Slide\\slidesp_1711762568787_2.jpg"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\Slide\\slidesp_1711762582992_3.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Slide\\slidesp_1711762582992_3.jpg"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\TinTuc\\tintucsp_1711727632506_1.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\TinTuc\\tintucsp_1711727632506_1.jpg"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\TinTuc\\tintucsp_1711727763643_0.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\TinTuc\\tintucsp_1711727763643_0.jpg"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\TinTuc\\tintucsp_1711727822218_0.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\TinTuc\\tintucsp_1711727822218_0.jpg"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\TinTuc\\tintucsp_1711728765905_0.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\TinTuc\\tintucsp_1711728765905_0.jpg"
+    },
+    {
+      "Id": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\TinTuc\\tintucsp_1711728809519_1.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\TinTuc\\tintucsp_1711728809519_1.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Back_End.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Back_End.props",
+      "PackagePath": "build\\Back_End.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Back_End.props",
+      "PackagePath": "buildMultiTargeting\\Back_End.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Back_End.props",
+      "PackagePath": "buildTransitive\\Back_End.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,112 @@
+<div id="breadcrumb">
+    <div class="container">
+        <h2 class="title">{{ tinTuc?.tieuDe }}</h2>
+
+        <ul class="breadcrumb">
+            <li><a [routerLink]="['/']" title="Home">Trang chủ</a></li>
+            <li><a [routerLink]="['/blogCategory']" title="Blog">Tin tức</a></li>
+            <li><span>{{ tinTuc?.tieuDe }}</span></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <!-- Sidebar -->
+        <div id="left-column" class="sidebar col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <!-- Block - Product Categories -->
+            <div class="block product-categories">
+                <h3 class="block-title">Sản phẩm</h3>
+
+                <div class="block-content">
+                    <div class="item" *ngFor="let item of loaiSanPham">
+                        <a class="category-title" [routerLink]="['/productCategory', item.id]">{{ item.tenLoai
+                            }}</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Block - Banner -->
+            <div class="block banner">
+                <div class="block-content">
+                    <div class="effect">
+                        <img class="img-responsive" src="assets/Client/img/blog-banner.jpg" alt="Banner">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div id="center-column" class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+            <div class="blog-detail">
+                <div class="post-item">
+                    <div class="post-image">
+                        <img class="img-responsive" src="{{ baseUrl }}/Uploads/TinTuc/{{ tinTuc?.image }}"
+                            alt="Blog Image">
+                    </div>
+
+                    <h1 class="post-title">{{ tinTuc?.tieuDe }}</h1>
+
+                    <div class="post-content border-bottom">
+                        <p [innerHTML]="tinTuc?.noiDung"></p>
+                    </div>
+
+                    <div class="post-meta border-bottom">
+                        <div class="post-info">
+                            <span class="date item"><i class="zmdi zmdi-calendar-note"></i>{{ tinTuc?.ngayTao
+                                |date:'dd/MM/yyyy' }}</span>
+                            <span class="author item"><i class="zmdi zmdi-account"></i>{{ tinTuc?.name }}</span>
+                        </div>
+
+                        <div class="post-share">
+                            <div class="item">
+                                <a href="#"><i class="zmdi zmdi-share" aria-hidden="true"></i><span
+                                        class="text">Share</span></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><i class="zmdi zmdi-email" aria-hidden="true"></i><span class="text">Send to
+                                        a friend</span></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><i class="zmdi zmdi-print" aria-hidden="true"></i><span
+                                        class="text">Print</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="clear"></div>
+
+                    <div class="latest-news layout-2">
+                        <div class="block-title">
+                            <h2 class="title">Tin tức <span>liên quan</span></h2>
+                        </div>
+
+                        <div class="block-content">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" *ngFor="let item of tinTucTuongTu">
+                                    <div class="blog-item">
+                                        <div class="blog-image">
+                                            <a class="zoom-effect">
+                                                <img src="{{ baseUrl }}/Uploads/TinTuc/{{ item.image }}"
+                                                    alt="Blog Image">
+                                            </a>
+                                        </div>
+                                        <div class="blog-info">
+                                            <div class="blog-title"><a [routerLink]="['/blogDetail', item?.id]">{{
+                                                    item.tieuDe }}</a></div>
+                                            <div class="blog-desc">
+                                                <p
+                                                    [innerHTML]="item.noiDung.length > 100 ? (item.noiDung | slice:0:85) + '...' : item.noiDung">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
