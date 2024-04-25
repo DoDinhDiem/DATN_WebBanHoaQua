@@ -70,9 +70,6 @@
                         <th class="text-center" pSortableColumn="ghiChu">
                             Ghi chú<p-sortIcon field="ghiChu"></p-sortIcon>
                         </th>
-                        <th class="text-center" pSortableColumn="giamGia">
-                            Giảm giá<p-sortIcon field="giamGia"></p-sortIcon>
-                        </th>
                         <th class="text-center" pSortableColumn="tongTien">
                             Tổng tiền<p-sortIcon field="tongTien"></p-sortIcon>
                         </th>
@@ -93,12 +90,9 @@
                         <td class="text-center">{{ hoadonban.diaChi }}</td>
                         <td class="text-center">{{ hoadonban.ghiChu }}</td>
                         <td class="text-center">
-                            {{ hoadonban.giamGia | number }}
-                        </td>
-                        <td class="text-center">
                             {{ hoadonban.tongTien | number }}
                         </td>
-                        <td class="text-center">{{ hoadonban.trangThai }}</td>
+                        <td class="text-center">{{ hoadonban.trangThaiDonHang }}</td>
                         <td class="text-center">
                             <p *ngIf="hoadonban.trangThaiThanhToan == true">
                                 Đã thanh toán
@@ -108,16 +102,12 @@
                             </p>
                         </td>
                         <td class="text-center">
-                            <p-accordion>
-                                <p-accordionTab header="Action">
-                                    <button pRipple class="button-actioc-many" (click)="edit(hoadonban)">
-                                        <i class="pi pi-pencil"></i> Sửa
-                                    </button>
-                                    <button class="button-actioc-many" (click)="InHoaDon(hoadonban)">
-                                        <i class="pi pi-book"></i> In hóa đơn
-                                    </button>
-                                </p-accordionTab>
-                            </p-accordion>
+                            <button pButton pRipple icon="pi pi-pencil" style="margin-right: 5px"
+                                class="p-button-rounded p-button-success me-2 action-button"
+                                (click)="edit(hoadonban)"></button>
+                            <button pButton pRipple icon="pi pi-print"
+                                class="p-button-rounded p-button-primary action-button"
+                                (click)="InHoaDon(hoadonban)"></button>
                         </td>
                     </tr>
                 </ng-template>
@@ -129,7 +119,7 @@
                 </ng-template>
             </p-table>
         </div>
-        <p-dialog [(visible)]="Dialog" [style]="{ width: '1050px' }" [header]="title" [modal]="true"
+        <p-dialog [(visible)]="Dialog" [style]="{ width: '1050px',height: '450px' }" [header]="title" [modal]="true"
             styleClass="p-fluid">
             <ng-template pTemplate="content">
                 <div class="field mb-3">
@@ -240,4 +230,5 @@
             </div>
         </p-dialog>
     </div>
+    <p-toast></p-toast>
 </div>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7yBTAhNofuDkULIRZhc4P2lixR9ATDtvQaVUP0AXwOJOa2++a8t+ErZneMP9yKtQzcA7mwPiZ/yptP0ZlYUDhQ==",
+  "dgSpecHash": "3n3W1sN1+4DLXnAP2o1tl4ry+7APOoMi8rmf3dVKsz/slQPaJaVJ01WRACnnu7C0uW4T/bJv9dcEFK47ajQHKA==",
   "success": true,
-  "projectFilePath": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\Back_End.csproj",
+  "projectFilePath": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\Back_End.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dodin\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\dodin\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",
@@ -134,11 +134,7 @@
     "C:\\Users\\dodin\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
     "C:\\Users\\dodin\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\dodin\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\dodin\\.nuget\\packages\\zstdsharp.port\\0.7.1\\zstdsharp.port.0.7.1.nupkg.sha512",
-    "C:\\Users\\dodin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\dodin\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\dodin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\dodin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.26\\microsoft.netcore.app.host.win-x64.6.0.26.nupkg.sha512"
+    "C:\\Users\\dodin\\.nuget\\packages\\zstdsharp.port\\0.7.1\\zstdsharp.port.0.7.1.nupkg.sha512"
   ],
   "logs": []
 }

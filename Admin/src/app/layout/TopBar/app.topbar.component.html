@@ -1,11 +1,11 @@
 <div class="layout-topbar">
-    <a class="layout-topbar-logo" routerLink="">
-        <img src="assets/Logo/logo.png" alt="logo">
-    </a>
-
     <button #menubutton class="p-link layout-menu-button layout-topbar-button" (click)="layoutService.onMenuToggle()">
         <i class="pi pi-bars"></i>
     </button>
+
+    <a class="layout-topbar-logo" routerLink="">
+        <img src="assets/Logo/logo.png" alt="logo">
+    </a>
 
     <button #topbarmenubutton class="p-link layout-topbar-menu-button layout-topbar-button"
         (click)="layoutService.showProfileSidebar()">

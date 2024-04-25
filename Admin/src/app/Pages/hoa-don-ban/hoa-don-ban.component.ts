@@ -73,7 +73,7 @@ export class HoaDonBanComponent {
         this.hoadonbanService.getById(hoadonban.id).subscribe((data) => {
             this.hoadonban = data;
             this.selectStatus = this.status.find(
-                (option) => option.name === data.trangThai
+                (option) => option.name === data.trangThaiDonHang
             );
             this.selectAction = this.actions.find(
                 (option) => option.value == data.trangThaiThanhToan

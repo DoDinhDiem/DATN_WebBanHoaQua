@@ -74,7 +74,9 @@ export class ProductDetailComponent {
     quantity: number = 1;
 
     increment() {
-        this.quantity++;
+        if (this.quantity < this.sanPham.soLuongTon) {
+            this.quantity++;
+        }
     }
 
     decrement() {
@@ -83,9 +85,34 @@ export class ProductDetailComponent {
         }
     }
 
+    isProductInCart(productId: number): number {
+        const cartItem = this.cartService
+            .getCartItem()
+            .find((item) => item.id === productId);
+        return cartItem ? cartItem.soLuong : 0;
+    }
+
     addToCart(product: any) {
+        if (product.soLuongTon <= 0) {
+            this.messageService.add({
+                severity: 'warn',
+                summary: 'Thông báo',
+                detail: 'Sản phẩm đã hết hàng!',
+                life: 3000,
+            });
+            return;
+        }
+        const cartQuantity = this.isProductInCart(product.id);
+        if (cartQuantity >= product.soLuongTon) {
+            this.messageService.add({
+                severity: 'warn',
+                summary: 'Thông báo',
+                detail: 'Số lượng sản phẩm trong giỏ hàng vượt quá số lượng có sẵn!',
+                life: 3000,
+            });
+            return;
+        }
         this.cartService.addToCartDetail(product, this.quantity);
-        this.cartService.loadCart();
         this.messageService.add({
             severity: 'success',
             summary: 'Thông báo',

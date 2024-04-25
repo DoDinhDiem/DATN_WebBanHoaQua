@@ -79,6 +79,7 @@ namespace Back_End.Controllers
                                         giaBan = x.GiaBan,
                                         giamGia = x.GiamGia,
                                         image = x.Anhsanphams.Where(p => p.TrangThai == true).Select(p => p.Image).FirstOrDefault(),
+                                        soLuongTon= x.SoLuong,
                                     }).Take(15).ToList();
                 return Ok(query);
             }
@@ -106,6 +107,7 @@ namespace Back_End.Controllers
                                         giaBan = x.GiaBan,
                                         giamGia = x.GiamGia,
                                         image = x.Anhsanphams.Where(p => p.TrangThai == true).Select(p => p.Image).FirstOrDefault(),
+                                        soLuongTon= x.SoLuong,
                                     }).Take(15).ToList();
                 return Ok(query);
             }
@@ -132,6 +134,7 @@ namespace Back_End.Controllers
                                  x.LoaiSanPhamId,
                                  x.GiaBan,
                                  x.GiamGia,
+                                 x.SoLuong
                              } into g
                              select new
                              {
@@ -140,6 +143,7 @@ namespace Back_End.Controllers
                                  giaBan = g.Key.GiaBan,
                                  giamGia = g.Key.GiamGia,
                                  image = _context.Anhsanphams.Where(p => p.TrangThai == true).Select(p => p.Image).FirstOrDefault(),
+                                 quantity = g.Key.SoLuong,
                                  total = g.Count()
                              }).Take(15).ToList();
 
@@ -168,6 +172,8 @@ namespace Back_End.Controllers
                                        giaBan = x.GiaBan,
                                        giamGia = x.GiamGia,
                                        image = x.Anhsanphams.Where(p => p.TrangThai == true).Select(p => p.Image).FirstOrDefault(),
+                                       soLuongTon= x.SoLuong,
+
                                    }).Take(10).ToList();
                 return Ok(query);
             }
@@ -194,6 +200,7 @@ namespace Back_End.Controllers
                                        giaBan = x.GiaBan,
                                        giamGia = x.GiamGia,
                                        image = x.Anhsanphams.Where(p => p.TrangThai == true).Select(p => p.Image).FirstOrDefault(),
+                                       soLuongTon= x.SoLuong,
                                    }).Take(10).ToList();
                 return Ok(query);
             }
@@ -222,6 +229,7 @@ namespace Back_End.Controllers
                                        giaBan = x.GiaBan,
                                        giamGia = x.GiamGia,
                                        imageList = x.Anhsanphams.Select(p => new { image = p.Image }).ToList(),
+                                       soLuongTon= x.SoLuong,
                                    }).FirstOrDefault();
                 return Ok(query);
             }
@@ -275,6 +283,7 @@ namespace Back_End.Controllers
                     giaBan = x.GiaBan,
                     giamGia = x.GiamGia,
                     image = x.Anhsanphams.Where(p => p.TrangThai == true).Select(p => p.Image).FirstOrDefault(),
+                    soLuongTon= x.SoLuong,
                 }).ToList();
 
                 var response = new
@@ -310,6 +319,7 @@ namespace Back_End.Controllers
                                        giaBan = x.GiaBan,
                                        giamGia = x.GiamGia,
                                        image = x.Anhsanphams.Where(p => p.TrangThai == true).Select(p => p.Image).FirstOrDefault(),
+                                       soLuongTon= x.SoLuong,
                                    }).Take(10).ToList();
                 return Ok(query);
             }
@@ -498,30 +508,127 @@ namespace Back_End.Controllers
             }
         }
 
+        [Route("DonMua")]
+        [HttpGet]
+        public async Task<IActionResult> SearchHoaDonXuat([FromQuery] string email, int? trangThai)
+        {
+            try
+            {
 
-        //[Route("Update_KhachHang")]
-        //[HttpPut]
-        //public IActionResult UpdateKhachHang([FromBody] Khachang model)
-        //{
-        //    try
-        //    {
-        //        var query = _context.Khachangs.Find(model.Id);
+                var query = _context.Hoadonbans.Where(x => x.Email == email);
 
-        //        query.HoTen = model.HoTen;
-        //        query.DiaChi = model.DiaChi;
-        //        query.GioiTinh = model.GioiTinh;
-        //        query.NgaySinh = model.NgaySinh;
+                if (trangThai.HasValue)
+                {
+                    switch (trangThai)
+                    {
+                        case 0:
+                            query = query.Where(x => x.TrangThaiDonHang == "Đang xử lý");
+                            break;
+                        case 1:
+                            query = query.Where(x => x.TrangThaiDonHang == "Đã xác nhận");
+                            break;
+                        case 2:
+                            query = query.Where(x => x.TrangThaiDonHang == "Đang vận chuyển");
+                            break;
+                        case 3:
+                            query = query.Where(x => x.TrangThaiDonHang == "Giao hàng thành công");
+                            break;
+                        case 4:
+                            query = query.Where(x => x.TrangThaiDonHang == "Đã hủy");
+                            break;
+                        case 5:
+                            query = query.Where(x => x.TrangThaiDonHang == "Đã hoàn trả");
+                            break;
+                        default:
+                            break;
+                    }
+                }
 
-        //        _context.SaveChanges();
+                var totalItems = await query.CountAsync();
 
-        //        return Ok(new { message = "Cập nhập thông tin khách hàng thành công" });
+                var totalAmount = await query.SumAsync(x => x.TongTien);
 
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return BadRequest(ex.Message);
-        //    }
-        //}
+                var hoaDonList = await query
+                    .OrderByDescending(x => x.NgayTao)
+                    .Select(hd => new
+                    {
+                        id = hd.Id,
+                        tinhTrang = hd.TrangThaiDonHang,
+                        tongTien = hd.TongTien,
+                        ChiTiet = _context.Chitiethoadonbans
+                            .Where(ct => ct.HoaDonBanId == hd.Id)
+                            .Select(a => new
+                            {
+                                TenSP = _context.Sanphams.Where(sp => sp.Id == a.SanPhamId).Select(sp => sp.TenSanPham).FirstOrDefault(),
+                                AnhSP = _context.Anhsanphams.Where(sp => sp.SanPhamId == a.SanPhamId).Select(sp => sp.Image).FirstOrDefault(),
+                                SoLuong = a.SoLuong,
+                                GiaBan = a.GiaBan,
+                                ThanhTien = a.ThanhTien
+                            }).ToList()
+                    })
+                    .ToListAsync();
+
+                var response = new
+                {
+                    TotalItems = totalItems,
+                    TotalAmount = totalAmount,
+                    Items = hoaDonList
+                };
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [Route("Update_DonHang/{id}")]
+        [HttpPut]
+        public IActionResult Update(int id, Hoadonban model)
+        {
+            try
+            {
+                var query = _context.Hoadonbans.Find(id);
+                query.TrangThaiDonHang = model.TrangThaiDonHang;
+
+                _context.SaveChanges();
+                return Ok(new
+                {
+                    message = "Cập nhập hóa đơn thành công"
+                });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
+        [Route("Update_KhachHang")]
+        [HttpPut]
+        public IActionResult UpdateKhachHang([FromBody] Khachang model)
+        {
+            try
+            {
+                var query = _context.Khachangs.Find(model.Id);
+
+                query.HoTen = model.HoTen;
+                query.DiaChi = model.DiaChi;
+                query.SoDienThoai = model.SoDienThoai;
+                query.GioiTinh = model.GioiTinh;
+                query.NgaySinh = model.NgaySinh;
+
+                _context.SaveChanges();
+
+                return Ok(new { message = "Cập nhập thông tin khách hàng thành công" });
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
 
         [Route("Create_HoaDonBan")]
         [HttpPost]

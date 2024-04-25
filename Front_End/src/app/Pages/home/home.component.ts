@@ -113,7 +113,25 @@ export class HomeComponent {
             this.loaiSanPham = data;
         });
     }
+
+    isProductInCart(productId: number): number {
+        const cartItem = this.cartService
+            .getCartItem()
+            .find((item) => item.id === productId);
+        return cartItem ? cartItem.soLuong : 0;
+    }
     addToCart(product: any) {
+        const cartQuantity = this.isProductInCart(product.id);
+        if (cartQuantity >= product.soLuongTon) {
+            this.messageService.add({
+                severity: 'warn',
+                summary: 'Thông báo',
+                detail: 'Số lượng sản phẩm trong giỏ hàng vượt quá số lượng có sẵn!',
+                life: 3000,
+            });
+            return;
+        }
+
         this.cartService.addToCart(product);
         this.cartService.loadCart();
         this.messageService.add({

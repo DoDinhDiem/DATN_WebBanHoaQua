@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iQHtBDazOWb2SCULf9r752vtNbTkG4Z327qUQmC5Y/Y=",
+  "Hash": "TfHWhQiPfBVIi60iomWKC2ViaCDTrpCry/BpOTQof0c=",
   "Source": "Back_End",
   "BasePath": "_content/Back_End",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Back_End\\wwwroot",
       "Source": "Back_End",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\LoaiSanPham\\personnel_1711587212030_0.png",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\LoaiSanPham\\personnel_1711587212030_0.png",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/LoaiSanPham/personnel_1711587212030_0.png",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\LoaiSanPham\\personnel_1711587212030_0.png"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\LoaiSanPham\\personnel_1711587424640_0.png",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\LoaiSanPham\\personnel_1711587424640_0.png",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/LoaiSanPham/personnel_1711587424640_0.png",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\LoaiSanPham\\personnel_1711587424640_0.png"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\LoaiSanPham\\personnel_1711587446536_1.png",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\LoaiSanPham\\personnel_1711587446536_1.png",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/LoaiSanPham/personnel_1711587446536_1.png",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\LoaiSanPham\\personnel_1711587446536_1.png"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\NhanVien\\nhanvien_1711619332536_0.jpg",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\NhanVien\\nhanvien_1711619332536_0.jpg",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/NhanVien/nhanvien_1711619332536_0.jpg",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\NhanVien\\nhanvien_1711619332536_0.jpg"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\NhanVien\\nhanvien_1711619417589_0.jpg",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\NhanVien\\nhanvien_1711619417589_0.jpg",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/NhanVien/nhanvien_1711619417589_0.jpg",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\NhanVien\\nhanvien_1711619417589_0.jpg"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\NhanVien\\nhanvien_1711619588035_0.jpg",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\NhanVien\\nhanvien_1711619588035_0.jpg",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/NhanVien/nhanvien_1711619588035_0.jpg",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\NhanVien\\nhanvien_1711619588035_0.jpg"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\NhanVien\\nhanvien_1711620597430_1.jpg",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\NhanVien\\nhanvien_1711620597430_1.jpg",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/NhanVien/nhanvien_1711620597430_1.jpg",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\NhanVien\\nhanvien_1711620597430_1.jpg"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\NhanVien\\nhanvien_1711621601835_0.jpg",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\NhanVien\\nhanvien_1711621601835_0.jpg",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/NhanVien/nhanvien_1711621601835_0.jpg",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\NhanVien\\nhanvien_1711621601835_0.jpg"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\Products\\product_1711599538814_1.jpg",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\Products\\product_1711599538814_1.jpg",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/Products/product_1711599538814_1.jpg",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\Products\\product_1711599538814_1.jpg"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\Products\\product_1711599538815_2.jpg",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\Products\\product_1711599538815_2.jpg",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/Products/product_1711599538815_2.jpg",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\Products\\product_1711599538815_2.jpg"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\Products\\product_1711599538816_3.jpg",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\Products\\product_1711599538816_3.jpg",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/Products/product_1711599538816_3.jpg",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\Products\\product_1711599538816_3.jpg"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\Products\\product_1711599538816_4.jpg",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\Products\\product_1711599538816_4.jpg",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/Products/product_1711599538816_4.jpg",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\Products\\product_1711599538816_4.jpg"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\Products\\product_1711600426560_0.jpg",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\Products\\product_1711600426560_0.jpg",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/Products/product_1711600426560_0.jpg",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\Products\\product_1711600426560_0.jpg"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\Slide\\slidesp_1711607844572_0.jpg",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\Slide\\slidesp_1711607844572_0.jpg",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/Slide/slidesp_1711607844572_0.jpg",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\Slide\\slidesp_1711607844572_0.jpg"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\Slide\\slidesp_1711607887550_0.jpg",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\Slide\\slidesp_1711607887550_0.jpg",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/Slide/slidesp_1711607887550_0.jpg",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\Slide\\slidesp_1711607887550_0.jpg"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\Slide\\slidesp_1711762533867_0.jpg",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\Slide\\slidesp_1711762533867_0.jpg",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/Slide/slidesp_1711762533867_0.jpg",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\Slide\\slidesp_1711762533867_0.jpg"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\Slide\\slidesp_1711762540471_1.jpg",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\Slide\\slidesp_1711762540471_1.jpg",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/Slide/slidesp_1711762540471_1.jpg",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\Slide\\slidesp_1711762540471_1.jpg"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\Slide\\slidesp_1711762568787_2.jpg",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\Slide\\slidesp_1711762568787_2.jpg",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/Slide/slidesp_1711762568787_2.jpg",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\Slide\\slidesp_1711762568787_2.jpg"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\Slide\\slidesp_1711762582992_3.jpg",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\Slide\\slidesp_1711762582992_3.jpg",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/Slide/slidesp_1711762582992_3.jpg",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\Slide\\slidesp_1711762582992_3.jpg"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\TinTuc\\tintucsp_1711727632506_1.jpg",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\TinTuc\\tintucsp_1711727632506_1.jpg",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/TinTuc/tintucsp_1711727632506_1.jpg",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\TinTuc\\tintucsp_1711727632506_1.jpg"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\TinTuc\\tintucsp_1711727763643_0.jpg",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\TinTuc\\tintucsp_1711727763643_0.jpg",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/TinTuc/tintucsp_1711727763643_0.jpg",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\TinTuc\\tintucsp_1711727763643_0.jpg"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\TinTuc\\tintucsp_1711727822218_0.jpg",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\TinTuc\\tintucsp_1711727822218_0.jpg",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/TinTuc/tintucsp_1711727822218_0.jpg",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\TinTuc\\tintucsp_1711727822218_0.jpg"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\TinTuc\\tintucsp_1711728765905_0.jpg",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\TinTuc\\tintucsp_1711728765905_0.jpg",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/TinTuc/tintucsp_1711728765905_0.jpg",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\TinTuc\\tintucsp_1711728765905_0.jpg"
     },
     {
-      "Identity": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\Uploads\\TinTuc\\tintucsp_1711728809519_1.jpg",
+      "Identity": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\Uploads\\TinTuc\\tintucsp_1711728809519_1.jpg",
       "SourceId": "Back_End",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Nguyệt\\DoAnTotNghiep\\Back_End\\Back_End\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dodin\\OneDrive\\Máy tính\\DATN_WebBanHoaQua\\Back_End\\Back_End\\wwwroot\\",
       "BasePath": "_content/Back_End",
       "RelativePath": "Uploads/TinTuc/tintucsp_1711728809519_1.jpg",
       "AssetKind": "All",

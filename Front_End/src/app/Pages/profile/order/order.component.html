@@ -1,0 +1,121 @@
+<title></title>
+<h1 class="a11y-hidden"></h1>
+<div class="ashFMQ">
+    <div></div>
+    <section class="QmO3Bu" aria-role="tablist">
+        <h2 class="a11y-hidden"></h2>
+        <a class="KI5har" title="Tất cả" [ngClass]="{'mRVNLm': selectedStatus === null}"
+            (click)="filterByStatus('tatca')">
+            <span class="NoH9rC">Tất cả</span>
+        </a>
+        <a class="KI5har" title="Đang xử lý" [ngClass]="{'mRVNLm': selectedStatus === 0}" (click)="filterByStatus(0)">
+            <span class="NoH9rC">Đang xử lý</span>
+        </a>
+        <a class="KI5har" title="Đã xác nhận" [ngClass]="{'mRVNLm': selectedStatus === 1}"
+            (click)="filterByStatus(1)"><span class="NoH9rC">Đã xác nhận</span>
+        </a>
+        <a class="KI5har" title="Đang vận chuyển" [ngClass]="{'mRVNLm': selectedStatus === 2}"
+            (click)="filterByStatus(2)"><span class="NoH9rC">Đang vận chuyển</span>
+        </a>
+        <a class="KI5har" title="Hoàn thành" [ngClass]="{'mRVNLm': selectedStatus === 3}"
+            (click)="filterByStatus(3)"><span class="NoH9rC">Hoàn thành</span>
+        </a>
+        <a class="KI5har" title="Đã hủy" [ngClass]="{'mRVNLm': selectedStatus === 4}" (click)="filterByStatus(4)">
+            <span class="NoH9rC">Đã hủy</span>
+        </a>
+        <a class="KI5har" title="Hoàn trả" [ngClass]="{'mRVNLm': selectedStatus === 5}" (click)="filterByStatus(5)">
+            <span class="NoH9rC">Hoàn trả</span>
+        </a>
+    </section>
+    <main aria-role="tabpanel" aria-labelledby="olp_tab_id-0.5939102886662626" id="olp_panel_id-0.5939102886662626">
+        <h2 class="a11y-hidden"></h2>
+        <div>
+            <div class="YL_VlX" *ngFor="let item of chitietList?.items">
+                <div>
+                    <div class="J632se">
+                        <section>
+                            <h3 class="a11y-hidden"></h3>
+                            <div class="P2JMvg">
+                                <div class="jgIyoX">
+                                    <div class="bv3eJE">{{ item.tinhTrang }}</div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="kG_yF0"></div>
+                        <section *ngFor="let sp of item.chiTiet">
+                            <h3 class="a11y-hidden"></h3>
+                            <a>
+                                <div>
+                                    <div class="bdAfgU">
+                                        <div class="FNHV0p">
+                                            <div>
+                                                <section>
+                                                    <div class="mZ1OWk">
+                                                        <div class="dJaa92"><img
+                                                                [src]="baseUrl + 'Uploads/Products/' +sp.anhSP"
+                                                                class="gQuHsZ" alt="">
+                                                            <div class="nmdHRf">
+                                                                <div>
+                                                                    <div class="zWrp4w">
+                                                                        <span class="DWVWOJ">{{ sp.tenSP }}</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="j3I_Nh">x{{ sp.soLuong }}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ylYzwa">
+                                                                <div class="YRp1mm">
+                                                                    <span class="nW_6Oi PNlXhK">₫{{ sp.giaBan |
+                                                                        number}}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                    </div>
+                </div>
+                <div class="peteXU">
+                    <div class="IVFywZ HmaSt0"> </div>
+                    <div class="IVFywZ fT_AQM"> </div>
+                </div>
+                <div class="LwXnUQ">
+                    <div class="NWUSQP"><span class="R_ufN9">
+                        </span><label class="juCcT0">Thành tiền:</label>
+                        <div class="t7TQaf">₫{{ item.tongTien | number}}</div>
+                    </div>
+                </div>
+                <div class="yyqgYp">
+                    <div class="iwUeSD">
+
+                    </div>
+                    <section class="po9nwN grYckU">
+                        <h3 class="a11y-hidden"></h3>
+                        <div class="aAXjeK">
+                            <div *ngIf="item.tinhTrang == 'Đang xử lý' || item.tinhTrang == 'Đã xác nhận'">
+                                <button class="stardust-button stardust-button--primary QY7kZh"
+                                    (click)="huyHang(item.id)">Hủy hàng</button>
+                            </div>
+                        </div>
+                        <div class="hbQXWm">
+                            <div *ngIf="item.tinhTrang == 'Đang vận chuyển'">
+                                <button class="stardust-button stardust-button--secondary QY7kZh"
+                                    (click)="hoanThanh(item.id)">Đã nhận hàng</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<p-toast></p-toast>
+<p-confirmDialog [style]="{ width: '450px', }"></p-confirmDialog>

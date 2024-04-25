@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './Layout/layout/layout.component';
 import { AuthGuard } from './Guards/auth.guard';
+import { ProfileComponent } from './Pages/profile/profile.component';
 
 const routes: Routes = [
     {
@@ -101,6 +102,26 @@ const routes: Routes = [
                     import('./Pages/register/register.module').then(
                         (m) => m.RegisterModule
                     ),
+            },
+            {
+                path: 'profile',
+                component: ProfileComponent,
+                children: [
+                    {
+                        path: 'order',
+                        loadChildren: () =>
+                            import('./Pages/profile/order/order.module').then(
+                                (m) => m.OrderModule
+                            ),
+                    },
+                    {
+                        path: 'account',
+                        loadChildren: () =>
+                            import(
+                                './Pages/profile/account/account.module'
+                            ).then((m) => m.AccountModule),
+                    },
+                ],
             },
         ],
     },

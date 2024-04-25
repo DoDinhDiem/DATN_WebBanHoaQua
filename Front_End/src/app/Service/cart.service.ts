@@ -7,6 +7,7 @@ interface ICart {
     tenSanPham: string;
     thanhTien: number;
     soLuong: number;
+    soLuongTon: number;
 }
 @Injectable({
     providedIn: 'root',
@@ -40,6 +41,7 @@ export class CartService {
                 image: product.image,
                 thanhTien: product.giaBan - product.giamGia,
                 soLuong: 1,
+                soLuongTon: product.soLuongTon,
             };
             this.cartItems.push(newItem);
         }
@@ -61,6 +63,7 @@ export class CartService {
                 image: product.avatar,
                 thanhTien: product.giaBan - product.giamGia,
                 soLuong: quantity,
+                soLuongTon: product.soLuongTon,
             };
             this.cartItems.push(newItem);
         }

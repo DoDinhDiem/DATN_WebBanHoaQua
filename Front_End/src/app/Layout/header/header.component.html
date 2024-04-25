@@ -33,11 +33,18 @@
                                             class="fa fa-user"></i>Đăng ký</a>
                                 </div>
                                 <div class="item" *ngIf="isLoggedIn">
+                                    <a [routerLink]="['/profile/account']" title="Log in to your customer account">Tài
+                                        khoản của tôi</a>
+                                </div>
+                                <div class="item" *ngIf="isLoggedIn">
+                                    <a [routerLink]="['/profile/order']" title="Log in to your customer account">Đơn
+                                        mua</a>
+                                </div>
+                                <div class="item" *ngIf="isLoggedIn">
                                     <a title="Log in to your customer account" (click)="Logout()"><i
                                             class="fa fa-sign-in"></i>Đăng
                                         xuất</a>
                                 </div>
-
                             </div>
                         </div>
                     </div>

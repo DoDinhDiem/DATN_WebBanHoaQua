@@ -1,0 +1,96 @@
+<div class="utB99K">
+    <div class="SFztPl">
+        <h1 class="BVrKV_">Hồ sơ của tôi</h1>
+        <div class="QcW5xy">Quản lý thông tin hồ sơ để bảo mật tài khoản</div>
+    </div>
+    <div class="RCnc9v">
+        <div class="HrBg9Q">
+            <form>
+                <table class="bQkdAY">
+                    <tr>
+                        <td class="f1ZOv_"><label>Tên đăng nhập</label></td>
+                        <td class="o6L4e0">
+                            <div class="e_Vt__">
+                                <div class="PBfYlq">{{ khachhang.email }}</div><button class="clo49Q"></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="f1ZOv_"><label>Tên</label></td>
+                        <td class="o6L4e0">
+                            <div>
+                                <div class="NGoa5Z"><input type="text" name="hoTen" placeholder="" class="kKnR04"
+                                        [(ngModel)]="khachhang.hoTen"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="f1ZOv_"><label>Số điện thoại</label></td>
+                        <td class="o6L4e0">
+                            <div>
+                                <div class="NGoa5Z">
+                                    <input type="text" placeholder="" name="soDienThoai" class="kKnR04"
+                                        [(ngModel)]="khachhang.soDienThoai">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="f1ZOv_"><label>Giới tính</label></td>
+                        <td class="o6L4e0">
+                            <div class="prDHtK">
+                                <div class="stardust-radio-group" role="radiogroup">
+                                    <div class="stardust-radio">
+                                        <div class="stardust-radio__content">
+                                            <input type="radio" name="gioiTinh" id="nam" value="Nam"
+                                                [(ngModel)]="khachhang.gioiTinh">
+                                            <label for="nam"> Nam</label>
+                                        </div>
+                                    </div>
+                                    <div class="stardust-radio">
+                                        <div class="stardust-radio__content">
+                                            <input type="radio" name="gioiTinh" id="nu" value="Nữ"
+                                                [(ngModel)]="khachhang.gioiTinh">
+                                            <label for="nu"> Nữ</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="f1ZOv_"><label>Ngày sinh</label></td>
+                        <td class="o6L4e0">
+                            <div class="BWTNUj">
+                                <div>
+                                    <div class="NGoa5Z">
+                                        <input type="date" placeholder="" name="ngaySinh"
+                                            [(ngModel)]="khachhang.ngaySinh" class="kKnR04">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="f1ZOv_"><label>Địa chỉ</label></td>
+                        <td class="o6L4e0">
+                            <div>
+                                <div class="NGoa5Z">
+                                    <input type="text" placeholder="" name="diaChi" class="kKnR04"
+                                        [(ngModel)]="khachhang.diaChi">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="f1ZOv_"><label></label></td>
+                        <td class="o6L4e0"><button type="button" class="btn btn-solid-primary btn--m btn--inline"
+                                (click)="onSubmit()">Lưu</button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+<p-toast></p-toast>

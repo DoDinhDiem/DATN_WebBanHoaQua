@@ -10,6 +10,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { ToastModule } from 'primeng/toast';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgToastModule } from 'ng-angular-popup';
+import { CommonModule } from '@angular/common';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,6 +33,9 @@ import { AboutComponent } from './Pages/about/about.component';
 import { ContactComponent } from './Pages/contact/contact.component';
 import { SafePipe } from './Pages/contact/safe.pipe';
 import { SearchComponent } from './Pages/search/search.component';
+import { ProfileComponent } from './Pages/profile/profile.component';
+import { OrderComponent } from './Pages/profile/order/order.component';
+import { AccountComponent } from './Pages/profile/account/account.component';
 
 @NgModule({
     declarations: [
@@ -52,6 +57,9 @@ import { SearchComponent } from './Pages/search/search.component';
         ContactComponent,
         SafePipe,
         SearchComponent,
+        ProfileComponent,
+        OrderComponent,
+        AccountComponent,
     ],
     imports: [
         BrowserModule,
@@ -66,6 +74,8 @@ import { SearchComponent } from './Pages/search/search.component';
         ToastModule,
         BrowserAnimationsModule,
         NgToastModule,
+        CommonModule,
+        ConfirmDialogModule,
     ],
     providers: [
         {
