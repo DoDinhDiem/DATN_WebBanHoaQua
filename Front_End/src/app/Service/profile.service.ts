@@ -26,4 +26,8 @@ export class ProfileService {
             KhachHang
         );
     }
+
+    getById(id: any): Observable<any> {
+        return this.http.get<any>(baseUrl + 'api/User/GetById_HoaDonBan/' + id);
+    }
 }

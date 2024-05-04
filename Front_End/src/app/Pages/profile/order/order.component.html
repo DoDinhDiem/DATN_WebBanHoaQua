@@ -110,6 +110,12 @@
                                     (click)="hoanThanh(item.id)">Đã nhận hàng</button>
                             </div>
                         </div>
+                        <div class="aAXjeK">
+                            <div>
+                                <button class="stardust-button stardust-button--primary QY7kZh"
+                                    (click)="InHoaDon(item)">Chi tiết đơn hàng</button>
+                            </div>
+                        </div>
                     </section>
                 </div>
             </div>
@@ -119,3 +125,81 @@
 
 <p-toast></p-toast>
 <p-confirmDialog [style]="{ width: '450px', }"></p-confirmDialog>
+<p-dialog [(visible)]="visible" [style]="{ width: '850px' }" header="Chi tiết hóa đơn" [modal]="true"
+    styleClass="p-fluid">
+    <div class="mt-3 text-center">
+        <img src="assets/Client/img/logo-2.png" height="30px" alt="logo" />
+    </div>
+    <div class="row mt-3">
+        <div class="col-12">
+            <div class="d-flex row">
+                <div class="col-md-6" style="font-size: 16px;">
+                    <p><b>Thông tin khách hàng</b></p>
+                    <p>
+                        <label style="font-weight: 400;" for="">Tên khách hàng:
+                            {{ hoadonban.hoTen }}</label>
+                    </p>
+                    <p>
+                        <label style="font-weight: 400;" for="">Số điện thoại:
+                            {{ hoadonban.soDienThoai }}</label>
+                    </p>
+                    <p>
+                        <label style="font-weight: 400;" for="">Email: {{ hoadonban.email }}</label>
+                    </p>
+                    <p>
+                        <label style="font-weight: 400;" for="">Địa chỉ: {{ hoadonban.diaChi }}</label>
+                    </p>
+                    <p>
+                        <label style="font-weight: 400;" for="">Ghi chú: {{ hoadonban.ghiChu }}</label>
+                    </p>
+                </div>
+
+                <div class="col-md-6" style="font-size: 16px;">
+                    <p><b>Thông tin hóa đơn</b></p>
+                    <p>
+                        <label style="font-weight: 400;" for="">Thanh toán:
+                            <span *ngIf="
+                                hoadonban.trangThaiThanhToan ==
+                                false
+                            ">Chưa thanh toán</span>
+                            <span *ngIf="
+                                hoadonban.trangThaiThanhToan == true
+                            ">Đã thanh toán</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label style="font-weight: 400;" for="">Tổng tiền:
+                            {{ hoadonban.tongTien | number }}</label>
+                    </p>
+                    <p>
+                        <label style="font-weight: 400;" for="">Phương thức thanh toán:
+                            {{ hoadonban.phuongThucThanhToan }}</label>
+                    </p>
+                </div>
+            </div>
+            <div class="col-12" style="font-size: 16px;">
+                <p><b>Chi tiết</b></p>
+                <p-table [value]="chiTietHoaDons" [tableStyle]="{ 'min-width': '50rem' }">
+                    <ng-template pTemplate="header">
+                        <tr style="font-size: 16px;">
+                            <th>Sản phẩm</th>
+                            <th>Đơn giá</th>
+                            <th>Số lượng</th>
+                            <th>Thành tiền</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-chiTietHoaDon>
+                        <tr style="font-size: 16px;">
+                            <td>{{ chiTietHoaDon.sanPhamId }}</td>
+                            <td>{{ chiTietHoaDon.giaBan | number }}</td>
+                            <td>{{ chiTietHoaDon.soLuong }}</td>
+                            <td>
+                                {{ chiTietHoaDon.thanhTien | number }}
+                            </td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+        </div>
+    </div>
+</p-dialog>

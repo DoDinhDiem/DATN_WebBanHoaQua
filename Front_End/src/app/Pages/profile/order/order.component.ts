@@ -103,4 +103,23 @@ export class OrderComponent {
             },
         });
     }
+    visible: boolean = false;
+
+    showDialog() {
+        this.visible = true;
+    }
+    hoadonban: IHoaDon = {};
+    chiTietHoaDons: any[] = [];
+
+    InHoaDon(hoadonban: IHoaDon) {
+        this.profileService.getById(hoadonban.id).subscribe((data) => {
+            this.hoadonban = data;
+            this.chiTietHoaDons = data.chiTietHoaDon;
+            this.showDialog();
+        });
+    }
+
+    printFunction() {
+        window.print();
+    }
 }

@@ -583,6 +583,41 @@ namespace Back_End.Controllers
             }
         }
 
+        [Route("GetById_HoaDonBan/{id}")]
+        [HttpGet]
+        public IActionResult GetById(int id)
+        {
+            try
+            {
+                var query = _context.Hoadonbans.Where(x => x.Id == id)
+                                            .Select(x => new
+                                            {
+                                                id = x.Id,
+                                                hoTen = x.KhachHang.HoTen,
+                                                email = x.Email,
+                                                soDienThoai = x.SoDienThoai,
+                                                diaChi = x.DiaChi,
+                                                ghiChu = x.GhiChu,
+                                                tongTien = x.TongTien,
+                                                trangThaiDonHang = x.TrangThaiDonHang,
+                                                trangThaiThanhToan = x.TrangThaiThanhToan,
+                                                phuongThucThanhToan = x.PhuongThucThanhToan,
+                                                chiTietHoaDon = _context.Chitiethoadonbans.Where(u => u.HoaDonBanId == id).Select(s => new
+                                                {
+                                                    sanPhamId = _context.Sanphams.Where(sp => sp.Id == s.SanPhamId).Select(sp => sp.TenSanPham).FirstOrDefault(),
+                                                    soLuong = s.SoLuong,
+                                                    giaBan = s.GiaBan,
+                                                    thanhTien = s.ThanhTien
+                                                }).ToList(),
+                                            }).FirstOrDefault();
+                return Ok(query);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [Route("Update_DonHang/{id}")]
         [HttpPut]
         public IActionResult Update(int id, Hoadonban model)

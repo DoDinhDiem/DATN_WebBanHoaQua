@@ -36,6 +36,9 @@ import { SearchComponent } from './Pages/search/search.component';
 import { ProfileComponent } from './Pages/profile/profile.component';
 import { OrderComponent } from './Pages/profile/order/order.component';
 import { AccountComponent } from './Pages/profile/account/account.component';
+import { OrderModule } from './Pages/profile/order/order.module';
+import { DialogModule } from 'primeng/dialog';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
     declarations: [
@@ -60,6 +63,7 @@ import { AccountComponent } from './Pages/profile/account/account.component';
         ProfileComponent,
         OrderComponent,
         AccountComponent,
+        OrderComponent,
     ],
     imports: [
         BrowserModule,
@@ -76,6 +80,9 @@ import { AccountComponent } from './Pages/profile/account/account.component';
         NgToastModule,
         CommonModule,
         ConfirmDialogModule,
+        OrderModule,
+        DialogModule,
+        TableModule,
     ],
     providers: [
         {
